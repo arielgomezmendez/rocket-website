@@ -1,7 +1,12 @@
 import React, { Fragment } from "react";
 import "./Launch.css";
+import { useState } from "react";
 
-const Launch = ({ launchers, onClick }) => {
+const Launch = ({ launchers }) => {
+  const [showLaunches, setShowLaunches] = useState(true);
+  const onClick = () => {
+    setShowLaunches(!showLaunches);
+  };
   return (
     <Fragment>
       {launchers.map((launcher) => (
