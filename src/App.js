@@ -15,10 +15,7 @@ function App() {
       {!showLaunchInfo ? (
         <Launches onClick={onClick} />
       ) : (
-        <LaunchInfo
-          showLaunchInfo={showLaunchInfo}
-          setShowLaunchInfo={setShowLaunchInfo}
-        />
+        <LaunchInfo onClick={onClick} />
       )}
     </div>
   );
