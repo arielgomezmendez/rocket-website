@@ -3,7 +3,8 @@ import Launch from "../Launch/Launch";
 import { useState } from "react";
 import { useEffect } from "react";
 import mock from "../../mocks/mock.json";
-const Launches = () => {
+
+const Launches = ({ onClick }) => {
   const [launchers, setLaunchers] = useState(mock.results);
 
   /* useEffect(() => {
@@ -18,11 +19,12 @@ const Launches = () => {
     };
     obtainLaunchers();
   }, []);*/
+
   console.log(launchers);
   return (
     <div>
       {launchers.map((l) => (
-        <Launch key={l.id} data={l} launchers={launchers} />
+        <Launch key={l.id} data={l} launchers={launchers} onClick={onClick} />
       ))}
     </div>
   );

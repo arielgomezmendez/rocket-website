@@ -5,14 +5,15 @@ import { useState } from "react";
 
 function App() {
   const [showLaunchInfo, setShowLaunchInfo] = useState(false);
+
   const onClick = () => {
-    console.log("Aqui");
     setShowLaunchInfo(!showLaunchInfo);
   };
+
   return (
     <div className="App">
-      {onClick ? (
-        <Launches />
+      {!showLaunchInfo ? (
+        <Launches onClick={onClick} />
       ) : (
         <LaunchInfo
           showLaunchInfo={showLaunchInfo}
