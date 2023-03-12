@@ -1,25 +1,26 @@
 import React, { Fragment } from "react";
 import "./Launch.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Launch = ({ launchers, onClick }) => {
+const Launch = ({ launches, onClick }) => {
   return (
     <Fragment>
-      {launchers.map((launcher) => (
-        <div className="launcher" key={launcher.id}>
+      {launches.map((launch) => (
+        <div className="launcher" key={launch.id}>
           <div className="launcher-details">
-            <p className="text-title">{launcher.name}</p>
+            <p className="text-title">{launch.name}</p>
             <p className="text-body">
-              Mission: {launcher?.mission?.name || "Mission does not exist"}
+              Mission: {launch?.mission?.name || "Mission does not exist"}
             </p>
             <p className="text-body">
               Date:
-              {" " + launcher.window_start}
+              {" " + launch.window_start}
             </p>
           </div>
-          <button className="launcher-button" onClick={onClick}>
+          <Link to={`/${launch.id}`} className="launcher-button">
             More info
-          </button>
+          </Link>
         </div>
       ))}
     </Fragment>

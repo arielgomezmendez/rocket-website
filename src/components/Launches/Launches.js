@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import mock from "../../mocks/mock.json";
 
 const Launches = ({ onClick }) => {
-  const [launchers, setLaunchers] = useState(mock.results);
+  const [launches, setLaunchers] = useState(mock.results);
 
   /* useEffect(() => {
     const obtainLaunchers = async () => {
@@ -20,11 +20,11 @@ const Launches = ({ onClick }) => {
     obtainLaunchers();
   }, []);*/
 
-  console.log(launchers);
+  console.log(launches);
   return (
     <div>
-      {launchers.map((l) => (
-        <Launch key={l.id} data={l} launchers={launchers} onClick={onClick} />
+      {launches.map((l) => (
+        <Launch key={l.id} data={l} launches={launches} onClick={onClick} />
       ))}
     </div>
   );

@@ -2,21 +2,20 @@ import "./App.css";
 import LaunchInfo from "./components/LaunchInfo/LaunchInfo";
 import Launches from "./components/Launches/Launches";
 import { useState } from "react";
+import { Route, Routes } from "react-router";
 
 function App() {
-  const [showLaunchInfo, setShowLaunchInfo] = useState(false);
-
-  const onClick = () => {
-    setShowLaunchInfo(!showLaunchInfo);
-  };
-
   return (
     <div className="App">
-      {!showLaunchInfo ? (
+      <Routes>
+        <Route path="/" element={<Launches />} />
+        <Route path="/:id" element={<LaunchInfo />} />
+      </Routes>
+      {/*!showLaunchInfo ? (
         <Launches onClick={onClick} />
       ) : (
         <LaunchInfo onClick={onClick} />
-      )}
+      )*/}
     </div>
   );
 }
