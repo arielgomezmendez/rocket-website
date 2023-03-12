@@ -2,11 +2,11 @@ import React from "react";
 import Launch from "../Launch/Launch";
 import { useState } from "react";
 import { useEffect } from "react";
+import mock from "../../mocks/mock.json";
+const Launches = () => {
+  const [launchers, setLaunchers] = useState(mock.results);
 
-const Launchers = () => {
-  const [launchers, setLaunchers] = useState([]);
-
-  useEffect(() => {
+  /* useEffect(() => {
     const obtainLaunchers = async () => {
       let response = await fetch(
         "https://spacelaunchnow.me/api/3.3.0/launch/upcoming/"
@@ -17,8 +17,8 @@ const Launchers = () => {
       console.log(data.results);
     };
     obtainLaunchers();
-  }, []);
-
+  }, []);*/
+  console.log(launchers);
   return (
     <div>
       {launchers.map((l) => (
@@ -28,7 +28,7 @@ const Launchers = () => {
   );
 };
 
-export default Launchers;
+export default Launches;
 
 {
   /*
