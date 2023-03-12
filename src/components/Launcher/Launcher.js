@@ -8,8 +8,10 @@ const Launcher = ({ launchers }) => {
         <div className="launcher" key={launcher.id}>
           <div className="launcher-details">
             <p className="text-title">{launcher.name}</p>
-            <p className="text-body">Here are the details of the card</p>
+            <p className="text-body">{launcher.name}</p>
+            {console.log(launcher.mission.name)}
           </div>
+
           <button className="launcher-button">More info</button>
         </div>
       ))}
@@ -20,6 +22,6 @@ const Launcher = ({ launchers }) => {
 export default Launcher;
 {
   /*
-{launchers.map((l, i) => l[i].name)}
+{launcher?.mission.name || "Mission dont exist"}
  */
 }
