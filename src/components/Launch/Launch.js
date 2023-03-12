@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-import "./Launcher.css";
+import "./Launch.css";
 
-const Launcher = ({ launchers }) => {
+const Launch = ({ launchers, onClick }) => {
   return (
     <Fragment>
       {launchers.map((launcher) => (
@@ -16,11 +16,13 @@ const Launcher = ({ launchers }) => {
               {" " + launcher.window_start}
             </p>
           </div>
-          <button className="launcher-button">More info</button>
+          <button className="launcher-button" onClick={onClick}>
+            More info
+          </button>
         </div>
       ))}
     </Fragment>
   );
 };
 
-export default Launcher;
+export default Launch;

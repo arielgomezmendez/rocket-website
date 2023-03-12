@@ -1,10 +1,12 @@
 import "./App.css";
-import Launchers from "./components/Launchers/Launchers";
+import LaunchInfo from "./components/LaunchInfo/LauncherInfo";
+import Launches from "./components/Launches/Launches";
 
 function App() {
   return (
     <div className="App">
-      <Launchers />
+      <Launches />
+      <LaunchInfo />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Launcher from "../Launcher/Launcher";
+import Launch from "../Launch/Launch";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -22,7 +22,7 @@ const Launchers = () => {
   return (
     <div>
       {launchers.map((l) => (
-        <Launcher key={l.id} data={l} launchers={launchers} />
+        <Launch key={l.id} data={l} launchers={launchers} />
       ))}
     </div>
   );
