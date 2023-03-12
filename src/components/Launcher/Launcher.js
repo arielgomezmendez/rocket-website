@@ -8,10 +8,14 @@ const Launcher = ({ launchers }) => {
         <div className="launcher" key={launcher.id}>
           <div className="launcher-details">
             <p className="text-title">{launcher.name}</p>
-            <p className="text-body">{launcher.name}</p>
-            {console.log(launcher.mission.name)}
+            <p className="text-body">
+              Mission: {launcher?.mission?.name || "Mission does not exist"}
+            </p>
+            <p className="text-body">
+              Date:
+              {" " + launcher.window_start}
+            </p>
           </div>
-
           <button className="launcher-button">More info</button>
         </div>
       ))}
@@ -20,8 +24,3 @@ const Launcher = ({ launchers }) => {
 };
 
 export default Launcher;
-{
-  /*
-{launcher?.mission.name || "Mission dont exist"}
- */
-}
