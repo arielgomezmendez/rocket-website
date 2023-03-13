@@ -14,8 +14,6 @@ const LaunchInfo = () => {
 
       let data = await response.json();
       setLaunch(data);
-      console.log(data);
-      console.log(launch);
     };
     obtainLaunchers();
   }, []);
@@ -24,8 +22,27 @@ const LaunchInfo = () => {
     <div>
       {launch ? (
         <div>
-          <h1>{launch.name}</h1>
+          <h1>{launch?.name || "Does not exist"}</h1>
+          <p>Date: {launch?.window_start || "Does not exist"}</p>
+          <p>Mission name: {launch?.mission?.name || "Does not exist"} </p>
+          <p>
+            Mission description:{" "}
+            {launch?.mission?.description || "Does not exist"}
+          </p>
+          <p>
+            Rocket name:{" "}
+            {launch?.rocket?.configuration?.name || "Does not exist"}
+          </p>
+          <p>
+            Launch Service Provider:{" "}
+            {launch?.rocket?.configuration?.launch_service_provider ||
+              "Does not exist"}
+          </p>
+          {/*
+          launch_service_provider
+          >
           <p>{launch.mission.name}</p>
+          <p>{launch.mission.description}</p> */}
         </div>
       ) : (
         "Cargando..."
