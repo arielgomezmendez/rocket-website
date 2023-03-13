@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import "./LaunchInfo.css";
 
 const LaunchInfo = () => {
   const [launch, setLaunch] = useState(null);
@@ -19,35 +20,34 @@ const LaunchInfo = () => {
   }, []);
 
   return (
-    <div>
+    <div className="launchInfo-container">
       {launch ? (
-        <div>
-          <h1>{launch?.name || "Does not exist"}</h1>
-          <p>Date: {launch?.window_start || "Does not exist"}</p>
-          <p>Mission name: {launch?.mission?.name || "Does not exist"} </p>
-          <p>
+        <div className="info">
+          <h1 className="title">{launch?.name || "Does not exist"}</h1>
+          <p className="text">
+            Date: {launch?.window_start || "Does not exist"}
+          </p>
+          <p className="text">
+            Mission name: {launch?.mission?.name || "Does not exist"}{" "}
+          </p>
+          <p className="text">
             Mission description:{" "}
             {launch?.mission?.description || "Does not exist"}
           </p>
-          <p>
+          <p className="text">
             Rocket name:{" "}
             {launch?.rocket?.configuration?.name || "Does not exist"}
           </p>
-          <p>
-            Launch Service Provider:{" "}
-            {launch?.rocket?.configuration?.launch_service_provider ||
-              "Does not exist"}
+          <p className="text">
+            Pad name: {launch?.pad?.name || "Does not exist"}
           </p>
-          {/*
-          launch_service_provider
-          >
-          <p>{launch.mission.name}</p>
-          <p>{launch.mission.description}</p> */}
         </div>
       ) : (
-        "Cargando..."
+        "Loading..."
       )}
-      <Link to="/">return</Link>
+      <Link to="/" className="return">
+        return
+      </Link>
     </div>
   );
 };

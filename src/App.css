@@ -13,5 +13,5 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(360deg, hsla(213, 70%, 13%, 1) 0%, hsla(192, 36%, 50%, 1) 100%);
+  background: linear-gradient(360deg, rgb(79, 0, 143) 0%, rgb(42, 0, 58) 100%);
 }
