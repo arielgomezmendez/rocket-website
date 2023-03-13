@@ -24,9 +24,7 @@ const Launches = ({ onClick }) => {
   console.log(launches);
   return (
     <div className="launches-container">
-      {launches.map((l) => (
-        <Launch key={l.id} data={l} launches={launches} onClick={onClick} />
-      ))}
+      <Launch launches={launches} onClick={onClick} />
     </div>
   );
 };
@@ -40,3 +38,11 @@ export default Launches;
       ))}
 */
 }
+
+/*
+<div className="launches-container">
+      {launches.map((l) => (
+        <Launch key={l.id} data={l} launches={launches} onClick={onClick} />
+      ))}
+    </div>
+*/
