@@ -44,7 +44,7 @@ const LaunchInfo = () => {
           </p>
 
           <Link to="/" className="return">
-            return
+            Return
           </Link>
         </div>
       ) : (
