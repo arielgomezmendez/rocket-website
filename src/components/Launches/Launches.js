@@ -3,6 +3,7 @@ import Launch from "../Launch/Launch";
 import { useState } from "react";
 import { useEffect } from "react";
 import mock from "../../mocks/mock.json";
+import "./Launches.css";
 
 const Launches = ({ onClick }) => {
   const [launches, setLaunchers] = useState(mock.results);
@@ -22,7 +23,7 @@ const Launches = ({ onClick }) => {
 
   console.log(launches);
   return (
-    <div>
+    <div className="launches-container">
       {launches.map((l) => (
         <Launch key={l.id} data={l} launches={launches} onClick={onClick} />
       ))}
