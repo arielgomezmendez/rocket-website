@@ -3,7 +3,9 @@
     .launchInfo-container {
         display: flex;
         flex-direction: column-reverse;
-        margin-top: 10rem;
+        margin-top: 4rem;
+
+
     }
 
     .info {
