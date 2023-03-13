@@ -1,7 +1,15 @@
 /*App mobile view*/
 @media screen and (max-width: 467px) {
     .App {
-        height: 328vh;
+        height: 330vh;
+
+    }
+}
+
+/*Intermediate view*/
+@media (min-width: 467px) and (max-width: 991px) {
+    .App {
+        height: 380vh;
 
     }
 }
