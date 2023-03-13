@@ -1,0 +1,7 @@
+/*App mobile view*/
+@media screen and (max-width: 467px) {
+    .App {
+        height: 328vh;
+
+    }
+}

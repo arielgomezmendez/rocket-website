@@ -1,0 +1,17 @@
+@media screen and (max-width: 467px) {
+    .launches-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .launches {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        gap: 1rem;
+    }
+
+    .launches-container h1 {
+        font-size: 4rem;
+        margin: 2rem;
+    }
+}

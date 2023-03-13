@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import mock from "../../mocks/mock.json";
 import "./Launches.css";
+import "./mobile.css";
 
 const Launches = ({ onClick }) => {
   const [launches, setLaunchers] = useState(mock.results);
