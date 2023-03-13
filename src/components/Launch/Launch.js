@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
 import "./Launch.css";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Launch = ({ launches, onClick }) => {
+const Launch = ({ launches }) => {
   return (
     <Fragment>
       {launches.map((launch) => (

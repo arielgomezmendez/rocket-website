@@ -22,7 +22,14 @@ const LaunchInfo = () => {
 
   return (
     <div>
-      {launch ? <h1>{launch.name} </h1> : "Cargando..."}
+      {launch ? (
+        <div>
+          <h1>{launch.name}</h1>
+          <h1>{launch.id}</h1>
+        </div>
+      ) : (
+        "Cargando..."
+      )}
       <Link to="/">return</Link>
     </div>
   );
