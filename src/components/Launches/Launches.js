@@ -24,25 +24,12 @@ const Launches = ({ onClick }) => {
   console.log(launches);
   return (
     <div className="launches-container">
-      <Launch launches={launches} onClick={onClick} />
+      <h1>UPCOMING ROCKET LAUNCHES</h1>
+      <div className="launches">
+        <Launch launches={launches} onClick={onClick} />
+      </div>
     </div>
   );
 };
 
 export default Launches;
-
-{
-  /*
-{data.results.map((l) => (
-        <Launcher key={l.id} data={l} />
-      ))}
-*/
-}
-
-/*
-<div className="launches-container">
-      {launches.map((l) => (
-        <Launch key={l.id} data={l} launches={launches} onClick={onClick} />
-      ))}
-    </div>
-*/

@@ -25,7 +25,7 @@ const LaunchInfo = () => {
       {launch ? (
         <div>
           <h1>{launch.name}</h1>
-          <h1>{launch.id}</h1>
+          <p>{launch.mission.name}</p>
         </div>
       ) : (
         "Cargando..."

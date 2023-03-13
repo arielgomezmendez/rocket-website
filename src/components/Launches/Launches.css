@@ -1,8 +1,21 @@
 .launches-container {
+    display: flex;
+    flex-direction: column;
     width: 90%;
+    text-align: center;
+}
+
+.launches {
     padding-left: 8rem;
     display: grid;
     grid-template-columns: repeat(5, 18rem);
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem 2rem;
+}
+
+.launches-container h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    margin: 4rem;
+    color: hsla(213, 70%, 13%, 1);
 }
