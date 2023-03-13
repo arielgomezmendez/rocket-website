@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./LaunchInfo.css";
+import "./mobile.css";
 import rocket from "../../assets/rocket.png";
 
 const LaunchInfo = () => {
