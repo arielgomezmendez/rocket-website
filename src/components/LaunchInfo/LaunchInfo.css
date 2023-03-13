@@ -1,19 +1,28 @@
 .launchInfo-container {
     display: flex;
     flex-direction: row;
+    margin-top: 10rem;
+}
+
+.info {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 18rem;
 }
 
 .title {
     font-family: 'Oswald', sans-serif;
     font-size: 4rem;
-    margin: 4rem;
     color: rgb(236, 236, 236);
+    margin-bottom: 2rem;
 }
 
 .text {
     color: rgb(236, 236, 236);
     font-family: 'Oswald', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    margin-top: 0.8rem;
 }
 
 .return {
@@ -25,13 +34,11 @@
     background-color: #f4a459;
     color: #f1f1f1;
     font-size: 1.2rem;
+    padding: 1rem 2rem;
+    margin-top: 10rem;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
-}
-
-.info {
-    width: 60rem;
 }
 
 .rocket-img {

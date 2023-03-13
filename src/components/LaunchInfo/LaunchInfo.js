@@ -42,16 +42,16 @@ const LaunchInfo = () => {
           <p className="text">
             Pad name: {launch?.pad?.name || "Does not exist"}
           </p>
+
+          <Link to="/" className="return">
+            return
+          </Link>
         </div>
       ) : (
         "Loading..."
       )}
-      <Link to="/" className="return">
-        return
-      </Link>
-      <picture>
-        <img className="rocket-img" src={rocket}></img>
-      </picture>
+
+      <img className="rocket-img" src={rocket}></img>
     </div>
   );
 };
