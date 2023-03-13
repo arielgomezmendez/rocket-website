@@ -9,13 +9,15 @@ html {
 }
 
 .App {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  background: linear-gradient(360deg, hsla(213, 70%, 13%, 1) 0%, hsla(192, 36%, 50%, 1) 100%);
 }
 
 .App h1 {
+  font-family: 'Oswald', sans-serif;
   font-size: 4rem;
   margin: 4rem;
 }
