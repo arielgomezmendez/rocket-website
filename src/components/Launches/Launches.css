@@ -1,1 +1,8 @@
-.launches-container {}
+.launches-container {
+    width: 90%;
+    padding-left: 7rem;
+    display: grid;
+    grid-template-columns: repeat(5, 18rem);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem 2rem;
+}
