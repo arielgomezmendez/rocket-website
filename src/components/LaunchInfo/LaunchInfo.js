@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./LaunchInfo.css";
+import rocket from "../../assets/rocket.png";
 
 const LaunchInfo = () => {
   const [launch, setLaunch] = useState(null);
@@ -48,6 +49,9 @@ const LaunchInfo = () => {
       <Link to="/" className="return">
         return
       </Link>
+      <picture>
+        <img className="rocket-img" src={rocket}></img>
+      </picture>
     </div>
   );
 };

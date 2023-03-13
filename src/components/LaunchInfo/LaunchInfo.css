@@ -1,3 +1,8 @@
+.launchInfo-container {
+    display: flex;
+    flex-direction: row;
+}
+
 .title {
     font-family: 'Oswald', sans-serif;
     font-size: 4rem;
@@ -13,14 +18,13 @@
 
 .return {
     text-align: center;
-    width: 60%;
+    width: 10rem;
+    height: 4rem;
     border-radius: 1rem;
     border: none;
     background-color: #f4a459;
     color: #f1f1f1;
     font-size: 1.2rem;
-    padding: .5rem 1rem;
-    transition: 0.3s ease-out;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
@@ -28,4 +32,9 @@
 
 .info {
     width: 60rem;
+}
+
+.rocket-img {
+    width: 20rem;
+    height: 16rem;
 }
