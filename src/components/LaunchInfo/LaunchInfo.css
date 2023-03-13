@@ -8,7 +8,7 @@
     width: 60rem;
     display: flex;
     flex-direction: column;
-    margin-right: 18rem;
+    margin-right: 4rem;
 }
 
 .title {
@@ -42,6 +42,6 @@
 }
 
 .rocket-img {
-    width: 20rem;
-    height: 16rem;
+    width: 38rem;
+    height: 42rem;
 }
