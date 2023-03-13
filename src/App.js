@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router";
 function App() {
   return (
     <div className="App">
+      <h1>UPCOMING ROCKET LAUNCHES</h1>
       <Routes>
         <Route path="/" element={<Launches />} />
         <Route path="/:id" element={<LaunchInfo />} />
