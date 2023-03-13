@@ -1,0 +1,35 @@
+/*LaunchInfo mobile view*/
+@media screen and (max-width: 487px) {
+    .launchInfo-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 10rem;
+    }
+
+    .info {
+        width: 28rem;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 3.8rem;
+    }
+
+    .text {
+        font-size: 1.4rem;
+
+    }
+}
+
+/*Intermediate view*/
+@media (max-width: 990px) {
+    .info {
+        width: 32rem;
+        margin-right: 0;
+    }
+
+    .rocket-img {
+        width: 28rem;
+        height: 32rem;
+    }
+}
