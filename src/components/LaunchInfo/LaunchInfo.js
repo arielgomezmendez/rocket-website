@@ -8,7 +8,6 @@ import Loader from "../Loader/Loader";
 const LaunchInfo = () => {
   const [launch, setLaunch] = useState(null);
   const params = useParams(); //obtain the launch id from the url
-  console.log(params);
 
   useEffect(() => {
     const obtainLaunchers = async () => {
