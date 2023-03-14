@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import "./LaunchInfo.css";
 import "./mobile.css";
 import rocket from "../../assets/rocket.png";
+import Loader from "../Loader/Loader";
 
 const LaunchInfo = () => {
   const [launch, setLaunch] = useState(null);
@@ -49,7 +50,7 @@ const LaunchInfo = () => {
           </Link>
         </div>
       ) : (
-        "Loading..."
+        <Loader />
       )}
 
       <img className="rocket-img" src={rocket}></img>
