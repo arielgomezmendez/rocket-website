@@ -11,11 +11,6 @@ function App() {
         <Route path="/" element={<Launches />} />
         <Route path="/:id" element={<LaunchInfo />} />
       </Routes>
-      {/*!showLaunchInfo ? (
-        <Launches onClick={onClick} />
-      ) : (
-        <LaunchInfo onClick={onClick} />
-      )*/}
     </div>
   );
 }
