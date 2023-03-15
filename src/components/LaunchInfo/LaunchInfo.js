@@ -19,7 +19,7 @@ const LaunchInfo = () => {
       setLaunch(data);
     };
     obtainLaunchers();
-  }, []);
+  }, [params.id]);
 
   return (
     <div className="launchInfo-container">
