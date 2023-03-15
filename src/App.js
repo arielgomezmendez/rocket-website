@@ -2,7 +2,6 @@ import "./App.css";
 import "./mobile.css";
 import LaunchInfo from "./components/LaunchInfo/LaunchInfo";
 import Launches from "./components/Launches/Launches";
-import { useState } from "react";
 import { Route, Routes } from "react-router";
 
 function App() {
