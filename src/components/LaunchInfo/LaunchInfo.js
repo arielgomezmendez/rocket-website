@@ -52,7 +52,7 @@ const LaunchInfo = () => {
         <Loader />
       )}
 
-      <img className="rocket-img" src={rocket} alt={"Rocket picture"}></img>
+      <img className="rocket-img" src={rocket} alt={"Rocket"}></img>
     </div>
   );
 };
