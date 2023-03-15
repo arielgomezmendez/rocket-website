@@ -38,4 +38,4 @@ CSS
 
 ## Credits
 
-This project was created by [Your Name]. It uses data from the Space Launch Now API.
+This project was created by Ariel Gómez Méndez. It uses data from the Space Launch Now API.
