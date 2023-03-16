@@ -3,7 +3,7 @@ import setLaunches from "../slice/index";
 
 const store = configureStore({
   reducer: {
-    launchers: setLaunches,
+    launchesReducer: setLaunches,
   },
 });
 

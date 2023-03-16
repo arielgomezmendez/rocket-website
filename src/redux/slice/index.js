@@ -5,7 +5,7 @@ const initialState = {
 };
 
 export const launchersSlice = createSlice({
-  name: "launchers",
+  name: "launchesReducer",
   initialState,
   reducers: {
     setLaunches: (state, action) => {

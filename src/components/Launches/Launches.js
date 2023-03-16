@@ -1,6 +1,5 @@
 import React from "react";
 import LaunchCard from "../LaunchCard/LaunchCard";
-import { useState } from "react";
 import { useEffect } from "react";
 import "./Launches.css";
 import "./mobile.css";
@@ -10,9 +9,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLaunches } from "../../redux/slice/index";
 
 const Launches = ({ onClick }) => {
-  //const [launches, setLaunchers] = useState(null);
+  //dispatach the reducer
   const dispatch = useDispatch();
-  const launches = useSelector((state) => state.launchers.launches);
+  const launches = useSelector((state) => state.launchesReducer.launches);
+
   useEffect(() => {
     const obtainLaunchers = async () => {
       let response = await fetch(

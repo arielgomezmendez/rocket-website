@@ -1,13 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./LaunchInfo.css";
 import "./mobile.css";
 import rocket from "../../assets/rocket.png";
 import Loader from "../Loader/Loader";
+//redux toolkit
+import { useDispatch, useSelector } from "react-redux";
+import { setLaunches } from "../../redux/slice";
 
 const LaunchInfo = () => {
-  const [launch, setLaunch] = useState(null);
   const params = useParams(); //obtain the launch id from the url
+
+  //dispatach the reducer
+  const dispatch = useDispatch();
+  const launch = useSelector((state) => state.launchers.launches);
 
   useEffect(() => {
     const obtainLaunchers = async () => {
@@ -16,10 +22,10 @@ const LaunchInfo = () => {
       );
 
       let data = await response.json();
-      setLaunch(data);
+      dispatch(setLaunches(data));
     };
     obtainLaunchers();
-  }, [params.id]);
+  }, [dispatch]);
 
   return (
     <div className="launchInfo-container">
