@@ -23,42 +23,43 @@ const LaunchInfo = () => {
       );
 
       let data = await response.json();
+      console.log("data " + data);
       dispatch(setLaunches(data));
     };
     obtainLaunchers();
   }, [dispatch]);
 
   return (
-    <div className="launchInfo-container">
-      {launch ? (
-        <div className="info">
-          <h1 className="title">{launch?.name || "Does not exist"}</h1>
-          <p className="text">
-            Date: {launch?.window_start || "Does not exist"}
-          </p>
-          <p className="text">
-            Mission name: {launch?.mission?.name || "Does not exist"}{" "}
-          </p>
-          <p className="text">
-            Mission description:{" "}
-            {launch?.mission?.description || "Does not exist"}
-          </p>
-          <p className="text">
-            Rocket name:{" "}
-            {launch?.rocket?.configuration?.name || "Does not exist"}
-          </p>
-          <p className="text">
-            Pad name: {launch?.pad?.name || "Does not exist"}
-          </p>
-
-          <Link to="/" className="return">
-            Return
-          </Link>
-        </div>
-      ) : (
-        <Loader />
-      )}
-
+    <div className="launchInfo-button-container">
+      <div className="launchInfo-container">
+        {launch ? (
+          <div className="info">
+            <h1 className="title">{launch?.name || "Does not exist"}</h1>
+            <p className="text">
+              Date: {launch?.window_start || "Does not exist"}
+            </p>
+            <p className="text">
+              Mission name: {launch?.mission?.name || "Does not exist"}{" "}
+            </p>
+            <p className="text">
+              Mission description:{" "}
+              {launch?.mission?.description || "Does not exist"}
+            </p>
+            <p className="text">
+              Rocket name:{" "}
+              {launch?.rocket?.configuration?.name || "Does not exist"}
+            </p>
+            <p className="text">
+              Pad name: {launch?.pad?.name || "Does not exist"}
+            </p>
+          </div>
+        ) : (
+          <Loader />
+        )}
+        <Link to="/" className="return">
+          Return
+        </Link>
+      </div>
       <img className="rocket-img" src={rocket} alt={"Rocket"}></img>
     </div>
   );

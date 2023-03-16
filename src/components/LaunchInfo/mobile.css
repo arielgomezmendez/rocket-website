@@ -1,14 +1,9 @@
 /*LaunchInfo mobile view*/
 @media screen and (max-width: 487px) {
-    .launchInfo-container {
+    .launchInfo-button-container {
         display: flex;
         flex-direction: column-reverse;
-        margin-top: 4rem;
-    }
-
-    .info {
-        width: 28rem;
-        margin: 0 auto;
+        margin-top: 2rem;
     }
 
     .title {
@@ -17,8 +12,9 @@
 
     .text {
         font-size: 1.4rem;
-
     }
+
+
 }
 
 /*Intermediate view*/

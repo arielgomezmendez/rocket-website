@@ -1,7 +1,13 @@
-.launchInfo-container {
+.launchInfo-button-container {
     display: flex;
     flex-direction: row;
     margin-top: 10rem;
+}
+
+.launchInfo-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
 }
 
 .info {
