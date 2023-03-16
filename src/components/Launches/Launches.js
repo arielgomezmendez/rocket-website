@@ -5,10 +5,14 @@ import { useEffect } from "react";
 import "./Launches.css";
 import "./mobile.css";
 import Loader from "../Loader/Loader";
+//redux toolkit
+import { useDispatch, useSelector } from "react-redux";
+import { setLaunches } from "../../redux/slice/index";
 
 const Launches = ({ onClick }) => {
-  const [launches, setLaunchers] = useState(null);
-
+  //const [launches, setLaunchers] = useState(null);
+  const dispatch = useDispatch();
+  const launches = useSelector((state) => state.launchers.launches);
   useEffect(() => {
     const obtainLaunchers = async () => {
       let response = await fetch(
@@ -16,10 +20,11 @@ const Launches = ({ onClick }) => {
       );
 
       let data = await response.json();
-      setLaunchers(data.results);
+      dispatch(setLaunches(data.results));
+      //setLaunchers(data.results);
     };
     obtainLaunchers();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="launches-container">

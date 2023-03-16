@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import launchersReducer from "./reducers/launchersReducer";
+import setLaunches from "../slice/index";
 
 const store = configureStore({
   reducer: {
-    launchers: launchersReducer,
+    launchers: setLaunches,
   },
 });
 

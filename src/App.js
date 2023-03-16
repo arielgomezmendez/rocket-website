@@ -11,7 +11,7 @@ import store from "./redux/store";
 function App() {
   return (
     <div className="App">
-      <Provider>
+      <Provider store={store}>
         <Routes>
           <Route path="/" element={<Launches />} />
           <Route path="/:id" element={<LaunchInfo />} />
