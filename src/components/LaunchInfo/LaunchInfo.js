@@ -13,7 +13,7 @@ const LaunchInfo = () => {
 
   //dispatach the reducer
   const dispatch = useDispatch();
-  const launch = useSelector((state) => state.launchers.launches);
+  const launch = useSelector((state) => state.launchesReducer.launches);
 
   useEffect(() => {
     const obtainLaunchers = async () => {

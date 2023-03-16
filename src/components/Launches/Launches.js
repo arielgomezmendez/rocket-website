@@ -21,7 +21,6 @@ const Launches = ({ onClick }) => {
 
       let data = await response.json();
       dispatch(setLaunches(data.results));
-      //setLaunchers(data.results);
     };
     obtainLaunchers();
   }, [dispatch]);
@@ -30,7 +29,8 @@ const Launches = ({ onClick }) => {
     <div className="launches-container">
       <h1>UPCOMING ROCKET LAUNCHES</h1>
       <div className="launches">
-        {launches ? (
+        {/*The card es renderized  if launches exist or if launches.length is greater than cero */}
+        {launches && launches.length > 0 ? (
           <LaunchCard launches={launches} onClick={onClick} />
         ) : (
           <Loader />
