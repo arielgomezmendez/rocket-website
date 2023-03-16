@@ -12,6 +12,7 @@ const Launches = ({ onClick }) => {
   //dispatach the reducer
   const dispatch = useDispatch();
   const launches = useSelector((state) => state.launchesReducer.launches);
+  console.log(launches);
 
   useEffect(() => {
     const obtainLaunchers = async () => {

@@ -3,7 +3,7 @@ import "./LaunchCard.css";
 import { Link } from "react-router-dom";
 
 const LaunchCard = ({ launches }) => {
-  console.log(launches);
+  //console.log(launches);
   return (
     <Fragment>
       {launches &&
