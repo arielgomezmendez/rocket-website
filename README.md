@@ -34,6 +34,7 @@ The LaunchInfo.js file is a component that displays detailed information about a
 
 React
 React Router
+Redux Toolkit
 CSS
 
 ## Credits
